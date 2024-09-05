@@ -1,0 +1,46 @@
+:root {
+	/*
+	-------------------------------- Color Swatches
+	Base colors, used by element colors.
+	*/
+	--cswPageBackgroundL1: rgb(0, 0, 0);	
+	--cswPageBackgroundL2:rgb(15, 15, 15);	
+	--cswPageBackgroundL3: rgb(30, 30, 30);	
+	--cswPageBackgroundL4: rgb(45, 45, 45);	
+	--cswPageBackgroundL5: rgb(60, 60, 60);
+	
+	--cswModalOverlayColor: rgba(255,255,255,0.1);
+	--cswLoadOverlayColor: rgba(0,0,0,0.5);
+
+	--cswContrastFaint: rgb(150, 150, 150);
+	--cswContrastNormal: rgb(205, 205, 205);
+	--cswContrastStrong: rgb(255, 255, 255);
+
+	--cswNegativeFaint:rgb(117, 29, 29);
+	--cswNegativeNormal:rgb(215, 27, 27);	
+	--cswNegativeStrong:rgb(251, 82, 82);
+
+	--cswSectionL1: rgb(31, 20, 7);
+	--cswSectionL2: rgb(133, 77, 14);
+	--cswSectionL3: rgb(231, 146, 35);	
+	--cswSectionL4: rgb(246, 176, 84);	
+	--cswSectionL5: rgb(245, 191, 121);	
+
+	--cswInteractL1: rgb(13, 28, 30);
+	--cswInteractL2: rgb(13, 61, 66);
+	--cswInteractL3: rgb(21, 134, 149);	
+	--cswInteractL4: rgb(86, 239, 244);
+	--cswInteractL5: rgb(172, 241, 246);	
+
+	--cswPositiveL1: rgb(17, 35, 18);
+	--cswPositiveL2: rgb(10, 49, 11);
+	--cswPositiveL3: rgb(16, 144, 26);	
+	--cswPositiveL4: rgb(58, 214, 71);
+	--cswPositiveL5: rgb(180, 255, 187);	
+	
+	--cswNegativeL1: rgb(21, 8, 8);
+	--cswNegativeL2: rgb(44, 7, 7);
+	--cswNegativeL3: rgb(126, 11, 11);
+	--cswNegativeL4: rgb(187, 30, 30);
+	--cswNegativeL5: rgb(251, 68, 68);	
+  }

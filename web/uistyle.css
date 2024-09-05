@@ -1,0 +1,637 @@
+:root {
+	--uiMenuBackgroundHigher: var(--cswPageBackgroundL5);
+	--uiMenuBackgroundHigh: var(--cswPageBackgroundL4);
+	--uiMenuBackgroundMid: var(--cswPageBackgroundL3);
+
+	--uiBackgroundBottom: var(--cswPageBackgroundL1);
+	--uiBackgroundCard: var(--cswPageBackgroundL2);
+
+	--uiBrightElements: var(--cswContrastStrong);
+	--uiBrightElementsEmphasis: var(--cswPositiveNormal);	
+
+	--uiToolTipBackground: var(--cswContrastStrong);
+	--uiToolTipFont: var(--cswPageBackgroundL1);
+
+	--uiNotificationsBGNone: rgb(0, 0, 0);
+	--uiNotificationsBGHigh: rgb(159, 19, 19);
+	--uiNotificationsBGMid: rgb(119, 114, 16);
+	--uiNotificationsBGlow: rgb(20, 123, 29);
+	--uiNotificationsFontColor: rgb(255,255,255);
+
+	--uiMessageTitleFontColor: var(--cswSectionNormal);
+	--uiMessageTextFontColor: var(--cswContrastStrong);
+	--uiMessageFooterFontColor: var(--cswContrastFaint);
+
+	--uiOverlayModal: var(--cswModalOverlayColor);
+	--uiOverlayLoad: var(--cswLoadOverlayColor);
+  }
+
+
+
+/*
+--------------------------------------- MAIN CONTAINER
+*/
+#uiMainContainer {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	overflow: hidden;
+
+	background-color: var(--uiBackgroundBottom);
+}
+
+
+/*
+--------------------------------------- FIXED ELEMENTS
+*/
+#uiTopMainMenuBarContainer {
+	position: fixed;
+	display: block;
+
+	top: 0px;
+	left: 0px;	
+	right: 0px;
+	height: 50px;
+
+	z-index: 500;
+}
+
+#uiLeftMainMenuBarContainer {
+	position: fixed;
+	display: block;
+
+	top: 0px;
+	left: 0px;
+	width: 200px;
+	bottom: 0px;
+
+	z-index: 400;
+}
+
+
+/*
+--------------------------------------- modal: SETTINGS
+*/
+
+.uiGenericModalFrame .settingsArea {
+	position: absolute;
+	display: flex;
+
+	flex-direction: column;
+
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	padding-right: 15px;
+
+	left: 5px;
+	right: 5px;
+	top: 10px;
+	bottom: 10px;
+}
+
+/*
+--------------------------------------- modal: NOTIFICATIONS
+*/
+
+.uiGenericModalFrame .notificationsList {
+	position: absolute;
+	display: flex;
+
+	flex-direction: column;
+
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	padding-right: 15px;
+
+	left: 5px;
+	right: 5px;
+	top: 10px;
+	bottom: 10px;
+}
+
+.uiGenericModalFrame .notificationsList .notificationContainer {
+	position: relative;
+	display: flex;
+
+	flex-direction: column;
+
+	left: 0px;
+	right: 0px;
+	height: auto;
+
+	margin-top: 10px;
+	padding-left: 10px;
+
+	border: none;
+	border-bottom: 1px solid var(--uiBackgroundCard);
+	border-left: 5px solid var(--uiBackgroundCard);
+}
+
+.uiGenericModalFrame .notificationsList .notificationContainer.high {
+	border-bottom: 1px solid var(--uiNotificationsBGHigh);
+	border-left: 5px solid var(--uiNotificationsBGHigh);
+}
+
+.uiGenericModalFrame .notificationsList .notificationContainer.mid {
+	border-bottom: 1px solid var(--uiNotificationsBGMid);
+	border-left: 5px solid var(--uiNotificationsBGMid);
+}
+
+.uiGenericModalFrame .notificationsList .notificationContainer.low {
+	border-bottom: 1px solid var(--uiNotificationsBGlow);
+	border-left: 5px solid var(--uiNotificationsBGlow);
+}
+
+.uiGenericModalFrame .notificationsList .notificationContainer .header {
+	position: relative;
+	display: flex;
+
+	width: 100%;
+	height: auto;
+
+	padding-bottom: 5px;
+
+	font-family: "Lucida Console", "Courier New", monospace;		
+	font-size: 10pt;
+	font-weight: bold;
+	color: var(--uiMessageTitleFontColor);
+}
+
+.uiGenericModalFrame .notificationsList .notificationContainer .message {
+	position: relative;
+	display: flex;
+
+	width: 100%;
+	height: auto;
+
+	font-family: "Lucida Console", "Courier New", monospace;	
+	font-size: 10pt;
+	line-height: 1.5;
+	color: var(--uiMessageTextFontColor);
+}
+
+.uiGenericModalFrame .notificationsList .notificationContainer .footer {
+	position: relative;
+	display: flex;
+
+	justify-content: flex-end;
+
+	width: 100%;
+	height: auto;
+
+	padding-top: 5px;
+
+	font-family: "Lucida Console", "Courier New", monospace;	
+	font-size: 8pt;
+	color: var(--uiMessageFooterFontColor);
+}
+
+
+/*
+--------------------------------------- component: TOP MENU BAR
+*/
+.uiTopMenuBar {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	top: 0px;
+	left: 0px;	
+	right: 0px;
+	height: 50px;
+
+	padding-left: 15px;
+	padding-right: 15px;	
+
+	color: var(--uiBrightElements);
+	font-family: "Lucida Console", "Courier New", monospace;	
+	font-size: 16pt;
+
+	background-color: var(--uiMenuBackgroundHigher);
+	filter: drop-shadow(0px 0px 5px #000000);
+	z-index: 500;
+}
+
+.uiTopMenuBar.small {
+	height: 25px;
+	font-size: 12pt;
+	padding-left: 6px;
+	padding-right: 6px;		
+}
+
+.uiTopMenuBar.medium {
+	height: 40px;
+	font-size: 14pt;
+	padding-left: 12px;
+	padding-right: 12px;		
+}
+
+.uiTopMenuBar.large {
+	height: 60px;
+	font-size: 16pt;
+	padding-left: 15px;
+	padding-right: 15px;		
+}
+
+.uiTopMenuBar .leftDiv {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	gap: 15px;
+
+	top: 0px;
+	left: 0px;
+	width: auto;
+	height: 100%;
+}
+
+.uiTopMenuBar .rightDiv {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	gap: 15px;
+
+	top: 0px;
+	right: 0px;	
+	width: auto;
+	height: 100%;
+}
+
+.uiTopMenuBar .itemdiv{
+	position: relative;
+	display: flex;
+
+	width: 1px;
+	height: 100%;
+
+	opacity: 0.25;
+	background-color: #000000;
+}
+
+.uiTopMenuBar .hspacer{
+	position: relative;
+	display: flex;
+	height: 100%;
+}
+
+/*
+--------------------------------------- component: LEFT MENU BAR
+*/
+.uiLeftMenuBar {
+	position: absolute;
+	display: block;
+
+	top: 0px;
+	left: 0px;
+	width: 200px;
+	bottom: 0px;
+
+	transition: all 0.4s;
+
+	background-color: var(--uiMenuBackgroundMid);
+	filter: drop-shadow(0px 0px 5px #000000);	
+}
+
+
+.uiLeftMenuBar.hidden{
+	pointer-events: none;
+	width: 0px;
+	filter: drop-shadow(0px 0px 0px #000000);
+}
+
+
+/*
+--------------------------------------- component: ICONS
+*/
+.iconic{
+	position: relative;
+	display: flex;
+
+	transition: all 0.2s;
+
+	color: var(--uiBrightElements);
+
+	animation: rotation 2s infinite linear;
+}
+
+.iconic.rotating{
+	animation: iconRotation 2s infinite linear;
+}
+
+@keyframes iconRotation {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(359deg);
+	}
+  }
+
+.iconic.clickable{
+	cursor: pointer;
+}
+
+.iconic.clickable:hover{
+	color: var(--uiBrightElementsEmphasis);
+	filter: drop-shadow(0px 0px 5px var(--uiBrightElementsEmphasis));
+}
+
+.iconic svg path{
+	fill: currentcolor;
+}
+
+/*
+--------------------------------------- component: GENERIC MODAL
+*/
+
+.uiGenericModalContainer {
+	position: fixed;
+	display: block;
+	pointer-events: none;
+
+	z-index: 1000;
+
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+}
+
+.uiGenericModalMask {
+	position: absolute;
+	display: flex;
+	pointer-events: all;
+
+	align-items: center;
+	justify-content: center;
+
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+
+	transition: all 0.4s;
+
+	opacity: 1.0;
+	background-color: var(--uiOverlayModal);
+	backdrop-filter: blur(10px);
+}
+.uiGenericModalContainer.hidden .uiGenericModalMask{
+	pointer-events: none;
+	opacity: 0.0;	
+	backdrop-filter: blur(0px);
+}
+
+.uiGenericModalFrame {
+	position: relative;
+	display: block;
+	pointer-events: all;
+
+	min-width: 400px;
+	min-height: 300px;
+	max-width: 90%;
+	max-height: 90%;
+
+	transition: all 0.1s;
+	opacity: 1.0;	
+
+	background-color: var(--uiBackgroundBottom);
+	box-shadow: 0px 0px 10px 0px var(--uiBackgroundBottom);
+	border: 1px solid var(--uiBackgroundCard);
+
+	overflow: hidden;
+}
+.uiModalLayer.hidden .uiGenericModalFrame{
+	pointer-events: none;
+	opacity: 0.0;	
+}
+
+.uiGenericModalFrame .modalContent{
+	position: absolute;
+	display: flex;
+
+	align-items: center;
+	justify-content: flex-start;
+
+	top: 50px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+/*
+--------------------------------------- component: Small Tooltip
+*/
+
+.uiSmallToolTip.container{
+	pointer-events: none;
+	position: fixed;
+	z-index: 1500;
+
+	transition: all 0.2s;
+	opacity: 1.0;
+	filter: drop-shadow(0px 0px 5px #000000);
+}
+
+.uiSmallToolTip.container.hidden{
+	opacity: 0.0;
+}
+
+.uiSmallToolTip.frame{
+	position: fixed;
+	display: block;
+	z-index: 21;
+
+	padding: 5px;
+	font-family: "Lucida Console", "Courier New", monospace;	
+	font-size: 10pt;
+
+	white-space: nowrap;
+	word-wrap: break-word;
+
+	max-width: 300px;
+
+	background-color: var(--uiToolTipBackground);
+}
+
+.uiSmallToolTip.arrow{
+	content: "";
+	position: fixed;
+	display: block;
+
+	width: 0px;
+	height: 0px;
+
+	border-style: solid;	
+	border-width: 8px;
+
+	z-index: 1;
+}
+
+.uiSmallToolTip.arrow.top{
+	margin-left: -8px;
+	border-color:  var(--uiToolTipBackground) transparent transparent transparent;	
+}
+
+.uiSmallToolTip.arrow.bottom{
+	margin-left: -8px;
+	border-color: transparent transparent var(--uiToolTipBackground) transparent;
+}
+
+.uiSmallToolTip.arrow.left{
+	margin-top: -8px;
+	border-color:  transparent transparent transparent var(--uiToolTipBackground);	
+}
+
+.uiSmallToolTip.arrow.right{
+	margin-top: -8px;
+	border-color: transparent var(--uiToolTipBackground) transparent transparent;
+}
+
+/*
+--------------------------------------- component: NOTIFICATIONS BAR
+*/
+.uiNotificationsBar {
+	position: fixed;
+	display: block;
+	width: 100%;
+	height: 0px;
+
+	overflow: hidden;
+	transition: all 0.2s;
+
+	z-index: 1400;
+
+	background-color: var(--uiNotificationsBGNone);
+	filter: drop-shadow(0px 0px 5px rgba(0,0,0,0));	
+}
+
+.uiNotificationsBar .messageElement {
+	position: absolute;
+	display: flex;
+
+	cursor: pointer;
+
+	align-items: center;
+	justify-content: flex-start;
+	overflow: hidden;
+
+	font-family: "Lucida Console", "Courier New", monospace;	
+	font-size: 12pt;
+	color: var(--uiNotificationsFontColor);
+
+	padding-left: 10px;
+
+	width: auto;
+	height: 100%;
+	left: 0px;
+
+	overflow: hidden;
+	filter: drop-shadow(1px 1px 1px rgb(0,0,0));	
+}
+
+.uiNotificationsBar .controlsElement {
+	position: absolute;
+	display: flex;
+
+	align-items: center;
+	justify-content: flex-end;
+
+	padding-right: 10px;
+
+	width: auto;
+	height: 100%;
+	right: 0px;
+
+	overflow: hidden;
+
+	color: var(--uiNotificationsFontColor);
+}
+
+.uiNotificationsBar.high {
+	height: 30px;
+	background-color: var(--uiNotificationsBGHigh);
+	filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));	
+}
+
+.uiNotificationsBar.mid {
+	height: 30px;
+	background-color: var(--uiNotificationsBGMid);
+	filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));	
+}
+
+.uiNotificationsBar.low {
+	height: 30px;
+	background-color: var(--uiNotificationsBGlow);
+	filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));	
+}
+
+/*
+--------------------------------------- component: LOAD FEEDBACK
+*/
+
+.uiLoadFeedback {
+	position: absolute;
+	display: flex;
+
+	gap: 10px;
+
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	left: 0px;
+	top: 0px;
+
+	width: 100%;
+	height: 100%;
+
+	z-index: 9999;
+
+	opacity: 1.0;
+	transition: all 0.3s;
+
+	background-color: var(--uiOverlayLoad);
+	backdrop-filter: blur(10px);
+}
+.uiLoadFeedback.hidden {
+	pointer-events: none;
+	opacity: 0.0;
+}
+
+.uiLoadFeedback .loadIcon {
+	position: relative;
+	display: flex;
+
+	filter: drop-shadow(0px 0px 5px var(--uiBrightElementsEmphasis));	
+}
+
+.uiLoadFeedback .loadText {
+	position: relative;
+	display: flex;
+
+	font-family: "Lucida Console", "Courier New", monospace;	
+
+	color: var(--uiBrightElementsEmphasis);
+	filter: drop-shadow(0px 0px 5px var(--uiBrightElementsEmphasis));	
+	
+	animation: animPulsating 0.3s infinite alternate;
+}
+
+@keyframes animPulsating {
+	from {
+	  opacity: 1.0;
+	}
+	to {
+		opacity: 0.7;
+	}
+  }

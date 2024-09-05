@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SVG Coloring Via CSS</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+        background: #ddd;
+        text-align: center;
+        padding-top: 2em;
+        }
+
+        .parent {
+        width: 320px;
+        height: 50px;
+        display: block;
+        transition: all 0.3s;
+        cursor: pointer;
+        padding: 12px;
+        box-sizing: border-box;
+        }
+
+        /***  desired colors for children  ***/
+        .parent{
+        color: #000;
+        background: #def;
+        }
+        .parent:hover{
+        color: #fff;
+        background: #85c1fc;
+        }
+
+        .parent span{
+        font-size: 18px;
+        margin-right: 8px;
+        font-weight: bold;
+        font-family: 'Helvetica';
+        line-height: 26px;
+        vertical-align: top;
+        }
+        .parent svg{
+        max-height: 26px;
+        width: auto;
+        display: inline;
+        }
+
+        /****  magic trick  *****/
+        .parent svg path{
+        fill: currentcolor;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class='parent'>
+        <span>TEXT WITH SVG</span>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 32 32">
+            <path d="M30.148 5.588c-2.934-3.42-7.288-5.588-12.148-5.588-8.837 0-16 7.163-16 16s7.163 16 16 16c4.86 0 9.213-2.167 12.148-5.588l-10.148-10.412 10.148-10.412zM22 3.769c1.232 0 2.231 0.999 2.231 2.231s-0.999 2.231-2.231 2.231-2.231-0.999-2.231-2.231c0-1.232 0.999-2.231 2.231-2.231z"></path>
+        </svg>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,491 @@
+:root {	
+	--btnColorsGeneralL1_bg: var(--cswPageBackgroundL1);
+	--btnColorsGeneralL1_font: var(--cswInteractL2);
+	--btnColorsGeneralL1_border: var(--cswInteractL1);
+
+	--btnColorsGeneralL2_bg: var(--cswPageBackgroundL1);
+	--btnColorsGeneralL2_font: var(--cswInteractL4);
+	--btnColorsGeneralL2_border: var(--cswInteractL2);
+
+	--btnColorsGeneralL3_bg: var(--cswInteractL2);
+	--btnColorsGeneralL3_font: var(--cswInteractL4);
+	--btnColorsGeneralL3_border: var(--cswInteractL4);
+
+	--btnColorsGeneralL4_bg: var(--cswInteractL3);
+	--btnColorsGeneralL4_font: var(--cswInteractL5);
+	--btnColorsGeneralL4_border: var(--cswInteractL5);
+
+
+	--btnColorsPositiveL1_bg: var(--cswPageBackgroundL1);
+	--btnColorsPositiveL1_font: var(--cswPositiveL2);
+	--btnColorsPositiveL1_border: var(--cswPositiveL1);
+
+	--btnColorsPositiveL2_bg: var(--cswPageBackgroundL1);
+	--btnColorsPositiveL2_font: var(--cswPositiveL4);
+	--btnColorsPositiveL2_border: var(--cswPositiveL2);
+
+	--btnColorsPositiveL3_bg: var(--cswPositiveL2);
+	--btnColorsPositiveL3_font: var(--cswPositiveL4);
+	--btnColorsPositiveL3_border: var(--cswPositiveL4);
+
+	--btnColorsPositiveL4_bg: var(--cswPositiveL3);
+	--btnColorsPositiveL4_font: var(--cswPositiveL5);
+	--btnColorsPositiveL4_border: var(--cswPositiveL5);
+
+
+	--btnColorsNegativeL1_bg: var(--cswPageBackgroundL1);
+	--btnColorsNegativeL1_font: var(--cswNegativeL2);
+	--btnColorsNegativeL1_border: var(--cswNegativeL1);
+
+	--btnColorsNegativeL2_bg: var(--cswPageBackgroundL1);
+	--btnColorsNegativeL2_font: var(--cswNegativeL4);
+	--btnColorsNegativeL2_border: var(--cswNegativeL2);
+
+	--btnColorsNegativeL3_bg: var(--cswNegativeL2);
+	--btnColorsNegativeL3_font: var(--cswNegativeL4);
+	--btnColorsNegativeL3_border: var(--cswNegativeL4);
+
+	--btnColorsNegativeL4_bg: var(--cswNegativeL3);
+	--btnColorsNegativeL4_font: var(--cswNegativeL5);
+	--btnColorsNegativeL4_border: var(--cswNegativeL5);	
+}
+
+/* 
+-------------------------------------------------------------------------------------
+-------------------------------- BUTTON ICON LABEL
+Button General Area 
+*/
+
+div.stereotypeformcontainer .buttontraycontainer {
+    position: relative;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+    
+    padding: 0px;
+}
+
+div.stereotypeformcontainer .buttontraycontainer .buttontraybuttons {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    min-width: fit-content;
+    width: 50%;
+    max-width: 90%;
+    
+    gap: 10px;
+}
+
+div.stereotypespecial .buttoniconlabel{
+    position: relative;
+    display: flex;
+
+	cursor: pointer;
+
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+}
+
+/* 
+-------------------------------------------------------------------------------------
+-------------------------------- BUTTON ICON LABEL
+Button Colors
+*/
+
+/* General */
+div.stereotypespecial .buttoniconlabel.generalA {
+    color: var(--btnColorsGeneralL1_font);
+    border-color: var(--btnColorsGeneralL1_border);
+    background-color: var(--btnColorsGeneralL1_bg);
+}
+div.stereotypespecial .buttoniconlabel.generalA:hover {
+    color: var(--btnColorsGeneralL1_font);
+    border-color: var(--btnColorsGeneralL1_border);
+    background-color: var(--btnColorsGeneralL1_bg);
+}
+
+div.stereotypespecial .buttoniconlabel.generalB {
+    color: var(--btnColorsGeneralL2_font);
+    border-color: var(--btnColorsGeneralL2_border);
+    background-color: var(--btnColorsGeneralL2_bg);
+}
+div.stereotypespecial .buttoniconlabel.generalB:hover {
+    color: var(--btnColorsGeneralL3_font);
+    border-color: var(--btnColorsGeneralL3_border);
+    background-color: var(--btnColorsGeneralL3_bg);
+}
+
+div.stereotypespecial .buttoniconlabel.generalC {
+    color: var(--btnColorsGeneralL3_font);
+    border-color: var(--btnColorsGeneralL3_border);
+    background-color: var(--btnColorsGeneralL3_bg);
+}
+div.stereotypespecial .buttoniconlabel.generalC:hover {
+    color: var(--btnColorsGeneralL4_font);
+    border-color: var(--btnColorsGeneralL4_border);
+    background-color: var(--btnColorsGeneralL4_bg);
+}
+
+/* Positive */
+div.stereotypespecial .buttoniconlabel.positiveA {
+    color: var(--btnColorsPositiveL1_font);
+    border-color: var(--btnColorsPositiveL1_border);
+    background-color: var(--btnColorsPositiveL1_bg);
+}
+div.stereotypespecial .buttoniconlabel.positiveA:hover {
+    color: var(--btnColorsPositiveL1_font);
+    border-color: var(--btnColorsPositiveL1_border);
+    background-color: var(--btnColorsPositiveL1_bg);
+}
+
+div.stereotypespecial .buttoniconlabel.positiveB {
+    color: var(--btnColorsPositiveL2_font);
+    border-color: var(--btnColorsPositiveL2_border);
+    background-color: var(--btnColorsPositiveL2_bg);
+}
+div.stereotypespecial .buttoniconlabel.positiveB:hover {
+    color: var(--btnColorsPositiveL3_font);
+    border-color: var(--btnColorsPositiveL3_border);
+    background-color: var(--btnColorsPositiveL3_bg);
+}
+
+div.stereotypespecial .buttoniconlabel.positiveC {
+    color: var(--btnColorsPositiveL3_font);
+    border-color: var(--btnColorsPositiveL3_border);
+    background-color: var(--btnColorsPositiveL3_bg);
+}
+div.stereotypespecial .buttoniconlabel.positiveC:hover {
+    color: var(--btnColorsPositiveL4_font);
+    border-color: var(--btnColorsPositiveL4_border);
+    background-color: var(--btnColorsPositiveL4_bg);
+}
+
+/* Negative */
+div.stereotypespecial .buttoniconlabel.negativeA {
+    color: var(--btnColorsNegativeL1_font);
+    border-color: var(--btnColorsNegativeL1_border);
+    background-color: var(--btnColorsNegativeL1_bg);
+}
+div.stereotypespecial .buttoniconlabel.negativeA:hover {
+    color: var(--btnColorsNegativeL1_font);
+    border-color: var(--btnColorsNegativeL1_border);
+    background-color: var(--btnColorsNegativeL1_bg);
+}
+
+div.stereotypespecial .buttoniconlabel.negativeB {
+    color: var(--btnColorsNegativeL2_font);
+    border-color: var(--btnColorsNegativeL2_border);
+    background-color: var(--btnColorsNegativeL2_bg);
+}
+div.stereotypespecial .buttoniconlabel.negativeB:hover {
+    color: var(--btnColorsNegativeL3_font);
+    border-color: var(--btnColorsNegativeL3_border);
+    background-color: var(--btnColorsNegativeL3_bg);
+}
+
+div.stereotypespecial .buttoniconlabel.negativeC {
+    color: var(--btnColorsNegativeL3_font);
+    border-color: var(--btnColorsNegativeL3_border);
+    background-color: var(--btnColorsNegativeL3_bg);
+}
+div.stereotypespecial .buttoniconlabel.negativeC:hover {
+    color: var(--btnColorsNegativeL4_font);
+    border-color: var(--btnColorsNegativeL4_border);
+    background-color: var(--btnColorsNegativeL4_bg);
+}
+
+/* 
+-------------------------------------------------------------------------------------
+-------------------------------- BUTTON ICON LABEL
+Button Shapes
+*/
+div.stereotypespecial .buttoniconlabel.typeA {
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    font-size: 10pt;	
+
+    align-items: center;
+    justify-content: center;	
+
+    height: 30px;
+    padding: 0px 20px;		
+
+    border-style: solid;
+    border-width: 0px;	
+    transition: all 0.2s;	
+}
+
+div.stereotypespecial .buttoniconlabel.typeB {
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    font-size: 10pt;	
+
+    align-items: center;
+    justify-content: center;	
+
+    height: 30px;
+    padding: 0px 20px;		
+
+    border-style: solid;
+    border-width: 0px;	
+    transition: all 0.2s;	
+}
+
+div.stereotypespecial .buttoniconlabel.typeC {
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    font-size: 10pt;	
+
+    align-items: center;
+    justify-content: center;	
+
+    height: 30px;
+    padding: 0px 20px;		
+
+    border-style: solid;
+    border-width: 0px;	
+    transition: all 0.2s;	
+}
+
+div.stereotypespecial .buttoniconlabel.typeD {
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    font-size: 10pt;	
+
+    align-items: center;
+    justify-content: center;	
+
+    height: 30px;
+    padding: 0px 20px;		
+
+    border-style: solid;
+    border-width: 0px;	
+    transition: all 0.2s;	
+}
+
+
+/* 
+-------------------------------------------------------------------------------------
+-------------------------------- BUTTON ICON LABEL
+Shape Elements
+*/
+
+/* Shape A ------------------------------------------------- */
+div.stereotypespecial .buttoniconlabel.typeA .cosmeticA{
+    position: absolute;
+    display: block;
+
+    left: 0px;
+    top: 0px;
+
+    width: 5px;
+    height: 5px;
+
+    border-color: inherit;
+    border-left-style: inherit;
+    border-left-width: 1px;
+    border-top-style: inherit;
+    border-top-width: 1px;
+}
+
+div.stereotypespecial .buttoniconlabel.typeA .cosmeticB{
+    position: absolute;
+    display: block;
+
+    top: 0px;
+    right: 0px;
+
+    width: 5px;
+    height: 5px;
+
+    border-color: inherit;
+    border-right-style: inherit;
+    border-right-width: 1px;
+    border-top-style: inherit;
+    border-top-width: 1px;
+}
+
+div.stereotypespecial .buttoniconlabel.typeA .cosmeticC{
+    position: absolute;
+    display: block;
+
+    left: 0px;
+    bottom: 0px;
+
+    width: 5px;
+    height: 5px;
+
+    border-color: inherit;
+    border-left-style: inherit;
+    border-left-width: 1px;
+    border-bottom-style: inherit;
+    border-bottom-width: 1px;
+}
+
+div.stereotypespecial .buttoniconlabel.typeA .cosmeticD{
+    position: absolute;
+    display: block;
+
+    right: 0px;
+    bottom: 0px;
+
+    width: 5px;
+    height: 5px;
+
+    border-color: inherit;
+    border-right-style: inherit;
+    border-right-width: 1px;
+    border-bottom-style: inherit;
+    border-bottom-width: 1px;
+}
+
+/* Shape B ------------------------------------------------- */
+div.stereotypespecial .buttoniconlabel.typeB .cosmeticA{
+    position: absolute;
+    display: block;
+
+    left: -1px;
+    right: -1px;
+    top: -1px;
+
+    height: 3px;
+
+    border-color: inherit;
+    border-right-style: inherit;
+    border-right-width: 1px;
+    border-left-style: inherit;
+    border-left-width: 1px;    
+    border-top-style: inherit;
+    border-top-width: 1px;
+}
+
+div.stereotypespecial .buttoniconlabel.typeB .cosmeticB{
+    position: absolute;
+    display: block;
+
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+
+    height: 3px;
+
+    border-color: inherit;
+    border-right-style: inherit;
+    border-right-width: 1px;
+    border-left-style: inherit;
+    border-left-width: 1px;    
+    border-bottom-style: inherit;
+    border-bottom-width: 1px;
+}
+
+div.stereotypespecial .buttoniconlabel.typeB .cosmeticC{
+    position: absolute;
+    display: block;
+
+    left: -1px;
+    right: -1px;
+    bottom: calc(50% - 1px);
+
+    height: 2px;
+
+    border-color: inherit;
+    border-right-style: inherit;
+    border-right-width: 1px;
+    border-left-style: inherit;
+    border-left-width: 1px;
+}
+
+div.stereotypespecial .buttoniconlabel.typeB .cosmeticD{
+    position: absolute;
+    display: none;
+
+    width: 0px;
+    height: 0px;
+}
+
+/* Shape C ------------------------------------------------- */
+div.stereotypespecial .buttoniconlabel.typeC .cosmeticA{
+    position: absolute;
+    display: block;
+
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+
+    width: 5px;
+
+    border-color: inherit;
+    border-bottom-style: inherit;
+    border-bottom-width: 1px;
+    border-left-style: inherit;
+    border-left-width: 1px;    
+    border-top-style: inherit;
+    border-top-width: 1px;
+    border-top-width: 1px;
+}
+
+div.stereotypespecial .buttoniconlabel.typeC .cosmeticB{
+    position: absolute;
+    display: block;
+
+    right: -1px;
+    top: -1px;
+    bottom: -1px;
+
+    width: 5px;
+
+    border-color: inherit;
+    border-bottom-style: inherit;
+    border-bottom-width: 1px;
+    border-right-style: inherit;
+    border-right-width: 1px;    
+    border-top-style: inherit;
+    border-top-width: 1px;
+}
+
+div.stereotypespecial .buttoniconlabel.typeC .cosmeticC{
+    position: absolute;
+    display: none;
+
+    width: 0px;
+    height: 0px;
+}
+
+div.stereotypespecial .buttoniconlabel.typeC .cosmeticD{
+    position: absolute;
+    display: none;
+
+    width: 0px;
+    height: 0px;
+}
+
+/* 
+-------------------------------- BUTTON ICON LABEL
+Icon Area 
+*/
+div.stereotypespecial .buttoniconlabel .icon {		
+	pointer-events: none;
+	display: flex;
+
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+
+	color: var(--primitiveTitle);
+
+	transition: 0.2s;
+
+	border-radius: 6px;
+	background-color: var(--pageBackground);
+}
+
+/* 
+-------------------------------- BUTTON ICON LABEL
+Label Area 
+*/
+div.stereotypespecial .buttoniconlabel .label {
+	pointer-events: none;
+}

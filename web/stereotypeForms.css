@@ -1,0 +1,358 @@
+@import url('./stereotypeFormsButtons.css');
+
+:root {	
+	/*
+	-------------------------------- Form Colors
+	colors used by form elements
+	refers to swatches
+	*/
+
+	--groupTitle: var(--cswSectionL3);
+	--groupBorder: var(--cswSectionL1);
+	--groupBorderHover: var(--cswSectionL1);
+
+	--primitiveTitle: var(--cswInteractL2);
+	--primitiveBorder: var(--cswInteractL2);
+	--primitiveBorderHover: var(--cswInteractL4);
+
+	--textFilled: var(--cswInteractL4);
+	--textMissing: var(--cswNegativeL3);
+
+	--pageBackground: var(--cswPageBackgroundL1);
+	--toolTipBackground: var(--cswPageBackgroundL3);
+
+	--plusColor: var(--cswInteractL3);
+	--plusColorStrong: var(--cswInteractL4);
+	--minusColor: var(--cswNegativeL3);
+	--minusColorStrong: var(--cswNegativeL4);
+}
+
+/* 
+---------------------------------------------- Stereotype Model Form controls
+*/
+
+div.stereotypeformcontainer {
+	position: relative;		
+	display: flex;
+
+	flex-direction: column;
+
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+}
+
+div.stereotypeformcontainer .formSelectors {
+	position: relative;		
+	display: flex;
+}
+
+div.stereotypeformcontainer .formModel {
+	position: relative;		
+	display: flex;
+}
+
+div.stereotypeformcontainer .formActions {
+	position: relative;		
+	display: flex;
+}
+
+
+/* 
+---------------------------------------------- Stereotype Main Container
+*/
+
+div.stereotypecontainer {
+	position: relative;		
+	display: flex;
+	flex-direction: column;	
+	width: auto;
+	color: var(--textFilled);
+
+	font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+
+div.stereotypecontainer.primitive {
+	border: none;
+	min-width: 200px;
+	margin: 10px 0px 5px 0px;
+}
+
+div.stereotypecontainer.group {
+	border: none;
+	
+	padding: 15px 10px 10px 10px;
+	margin: 15px 0px 5px 0px;
+
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+	min-width: fit-content;
+    
+	block-size: fit-content;	
+}
+div.stereotypecontainer.group:hover {
+	block-size: fit-content;
+}
+
+div.stereotypecontainer.group .groupBorderA{
+    position: absolute;
+    display: block;
+    pointer-events: none;
+
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+
+    border-top: 3px solid var(--groupBorder);
+}
+
+div.stereotypecontainer.group .groupBorderB{
+    position: absolute;
+    display: block;
+    pointer-events: none;
+
+    top: 0px;
+    right: 0px;
+    left: 0px;
+
+    height: 10px;
+
+    border-left: 1px solid var(--groupBorder);
+    border-right: 1px solid var(--groupBorder);
+}
+
+div.stereotypecontainer.group .groupBorderC{
+    position: absolute;
+    display: block;
+    pointer-events: none;
+
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+
+    height: 10px;
+
+    border: none;
+    border-right: 1px solid var(--groupBorder);
+    border-left: 1px solid var(--groupBorder);
+    border-bottom: 1px solid var(--groupBorder);
+}
+
+div.stereotypecontainer.group .groupBorderD{
+    position: absolute;
+    display: none;
+
+    width: 0px;
+    height: 0px;
+}
+
+div.stereotypecontainer .deleteElementContainer.primitive{
+	position: absolute;
+	display: flex;
+	bottom: 0px;
+	right: 0px;
+}
+
+div.stereotypecontainer .deleteElementContainer.group{
+	position: absolute;
+	display: flex;
+	top: -12px;
+	right: 0px;
+}
+
+/* 
+---------------------------------------------- Title
+*/
+
+div.stereotypecontainer .title {
+	position: relative;
+	display: flex;
+	z-index: 100;
+	
+	justify-content: flex-start;	
+}
+
+div.stereotypecontainer .title.primitive {
+	height: 15px;
+}
+
+div.stereotypecontainer .title.group {
+	height: 0px;
+}
+
+div.stereotypecontainer .title .label {
+	position: absolute;
+	display: flex;
+	
+	transition: 0.2s;
+}
+
+div.stereotypecontainer .title.primitive .label {
+	font-size: 10pt;
+	font-weight: normal;
+	color: var(--primitiveTitle);
+}
+
+div.stereotypecontainer .title.primitive .label.empty {
+	position: absolute;
+	pointer-events: none;
+	top: 16px;
+	left: 5px;	
+	font-size: 12pt;	
+	color: var(--textMissing);	
+}
+
+div.stereotypecontainer .title.primitive .label.filled {
+	position: absolute;
+	top: 0px;
+	left: 0px;		
+}
+
+div.stereotypecontainer .title.primitive .label.hidden {
+	position: absolute;
+	pointer-events: none;
+	top: 16px;
+	left: 5px;	
+	font-size: 12pt;	
+	color: var(--textMissing);	
+	opacity: 0.0;
+}
+
+div.stereotypecontainer .title.group .label {
+	font-size: 14pt;
+	font-weight: bold;
+	color: var(--groupTitle);
+
+	position: absolute;
+	top: -25px;	
+
+	background-color: var(--pageBackground);
+
+	padding: 0px 5px;	
+}
+
+/* 
+---------------------------------------------- Controls
+*/
+
+div.stereotypecontainer .controls {
+	position: relative;		
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;	
+	gap: 10px;	
+	margin: 0px;
+}
+
+div.stereotypecontainer .content.row {
+	flex-direction: row;
+	gap: 10px;
+}
+
+/* 
+---------------------------------------------- Content
+*/
+
+div.stereotypecontainer .content {
+	position: relative;		
+	display: flex;
+	justify-content: flex-start;
+	margin: 0px;
+}
+
+div.stereotypecontainer .content.col {
+	flex-direction: column;	
+	gap: 10px;
+}
+
+/* 
+---------------------------------------------- Input Container
+*/
+
+div.stereotypecontainer .inputContainer {
+	position: relative;
+	display: flex;
+	align-content: stretch;
+}
+
+div.stereotypecontainer .inputContainer .idleSelectMarker {
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	bottom: 0px;
+	transition: 0.2s;
+
+	background-color: var(--primitiveBorder);
+}
+
+div.stereotypecontainer .inputContainer .focusSelectMarker {
+	position: absolute;
+	width: 0px;
+	height: 1px;
+	bottom: 0px;
+	transition: 0.2s;
+
+	background-color: var(--plusColorStrong);
+	box-shadow: 0px 0px 0px 0px var(--primitiveBorderHover);
+}
+div.stereotypecontainer .inputContainer:hover .focusSelectMarker {
+	width: 100%;
+}
+div.stereotypecontainer .inputContainer:focus-within .focusSelectMarker {
+	width: 100%;
+	box-shadow: 0px 0px 5px 1px var(--primitiveBorderHover);
+}
+
+/* 
+---------------------------------------------- Input
+*/
+
+div.stereotypecontainer .input {
+	font-size: 12pt;
+	font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+	color: var(--textFilled);
+
+	width: 100%;
+
+	position: relative;		
+	display: flex;
+	align-content: stretch;
+	background-color: rgba(255, 255, 255, 0.0);
+
+	transition: 0.2s;
+
+	outline: none;
+	border: none;
+}
+
+div.stereotypecontainer select.input option{
+	font-size: 12pt;
+	font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+	color: var(--textFilled);
+	background-color:var(--toolTipBackground);
+	box-shadow: 0px 0px 5px 1px var(--primitiveBorderHover);
+}
+
+div.stereotypespecial{
+	position: relative;		
+	display: flex;
+	flex-direction: column;	
+	width: auto;
+}
+
+div.stereotypespecial.hidden{
+	display: none;
+}
+
+div.stereotypespecial .spacer{
+	width: 100%;
+}
+
+div.stereotypespecial .separator{
+	width: 100%;
+	border: none;
+	border: 1px solid var(--groupBorder);
+}
