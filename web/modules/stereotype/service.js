@@ -1,5 +1,4 @@
 export { getStereotypeService, setStereotypeService};
-import definitions from './definitions.json' assert { type: 'json' };
 
 import { createFullModelForm, createModelFormSelectors, createModelFormActions } from './modelform/modelformcontrols.js';
 import { createModelFormForModelHub } from './modelform/modelform.js';

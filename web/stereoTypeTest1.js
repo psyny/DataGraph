@@ -19,20 +19,20 @@ models = [
         "properties": [
             {
                 "name": "text field",
-                "label": "text field",                
+                "label": "text field",
                 "type": "text",
             },
             {
                 "name": "number field",
-                "label": "number field",       
+                "label": "number field",
                 "type": "number",
-            },  
+            },
             {
                 "name": "boolean field",
                 "label": "boolean field",
                 "trueLabel": "valid",
                 "type": "boolean",
-            },  
+            },
             {
                 "name": "object field",
                 "label": "",
@@ -41,54 +41,54 @@ models = [
                 "properties": [
                     {
                         "name": "object field a",
-                        "label": "object field a",           
+                        "label": "object field a",
                         "type": "object",
                         "properties": [
                             {
                                 "name": "text field 1",
-                                "label": "text field 1",      
+                                "label": "text field 1",
                                 "type": "text",
                             },
                             {
                                 "name": "text field 2",
-                                "label": "text field 2",        
+                                "label": "text field 2",
                                 "type": "text",
-                            },                            
+                            },
                         ],
                     },
                     {
                         "name": "object field b",
-                        "label": "object field b",                       
+                        "label": "object field b",
                         "type": "object",
                         "properties": [
                             {
                                 "name": "text field 1",
-                                "label": "text field 1",      
+                                "label": "text field 1",
                                 "type": "text",
                             },
                             {
                                 "name": "text field 2",
-                                "label": "text field 2",        
+                                "label": "text field 2",
                                 "type": "text",
-                            },                            
-                        ],                      
-                    },                    
+                            },
+                        ],
+                    },
                 ]
             },
             {
                 "name": "list field",
-                "label": "list field",         
+                "label": "list field",
                 "type": "list",
                 "subModel": {
-                        "name": "text field",
-                        "label": "text field",        
-                        "type": "text",
-                        "labelOnlyWhenEmpty": true,
-                    },                    
-            },  
+                    "name": "text field",
+                    "label": "text field",
+                    "type": "text",
+                    "labelOnlyWhenEmpty": true,
+                },
+            },
             {
                 "name": "list field 2",
-                "label": "list field 2",         
+                "label": "list field 2",
                 "type": "list",
                 "subModel": {
                     "name": "switch field",
@@ -97,17 +97,17 @@ models = [
                     "canBe": [
                         {
                             "name": "text field",
-                            "label": "text field",        
+                            "label": "text field",
                             "type": "text",
                         },
                         {
                             "name": "number field",
-                            "label": "number field",   
+                            "label": "number field",
                             "type": "number",
-                        },  
+                        },
                     ]
-                },                    
-            },              
+                },
+            },
             {
                 "name": "switch field 2",
                 "label": "switch field 2",
@@ -115,14 +115,14 @@ models = [
                 "canBe": [
                     {
                         "name": "text field",
-                        "label": "text field",        
+                        "label": "text field",
                         "type": "text",
                     },
                     {
                         "name": "number field",
-                        "label": "number field",   
+                        "label": "number field",
                         "type": "number",
-                    },  
+                    },
                 ]
             },
             {
@@ -130,13 +130,13 @@ models = [
                 "label": "logic field",
                 "type": "logic",
                 "subModel": {
-                        "name": "text field",
-                        "label": "text field",        
-                        "type": "text",
-                    },
-            },                         
+                    "name": "text field",
+                    "label": "text field",
+                    "type": "text",
+                },
+            },
         ],
-    },   
+    },
 ]
 
 // -------------------------------------------------------- Models Manager
@@ -212,6 +212,6 @@ var formElementData = createModelFormForModelHub(modelHub2, modelsManager);
 
 modelDiv.appendChild(formElementData["mainElement"]);
 
-const responseData = await Requests.post("postEndpointExample", {"Psyny": "Rafael"});
+const responseData = await Requests.post("postEndpointExample", { "Psyny": "Rafael" });
 
 console.log(responseData);

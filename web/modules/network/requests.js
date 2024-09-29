@@ -1,14 +1,15 @@
-export {Requests}
+import {Definitions} from '../definitions/definitions.js'
 
-import definitions from './definitions.json' assert { type: 'json' };
-import backenddefinitions from './backenddefinitions.json' assert { type: 'json' };
+export { Requests }
+
+let backenddefinitions = Definitions.getDefinitions();
 
 class Requests {
     static async post(partialPath, jsBody, jsHeader = {}) {
         return await Requests._request(partialPath, "POST", jsBody, jsHeader);
     }
 
-    static async get(partialPath, jsBody, jsHeader = {}) {
+    static async get(partialPath, jsBody, jsHeader = {}) {  
         return await Requests._request(partialPath, "GET", jsBody, jsHeader);
     }
 
@@ -37,7 +38,7 @@ class Requests {
                     "url": fullPath,
                 }
             }
-        );	
+        );
 
 
         if (responseObject) {
@@ -46,7 +47,12 @@ class Requests {
             return fallbackObject;
         }
     }
+
+    static async test() {
+        console.log("TEST")
+    } 
 }
+
 
 function getFullPath(partialPath) {
     return "http://" + backenddefinitions["host"] + ":" + backenddefinitions["port"] + '/' + partialPath;
@@ -54,18 +60,18 @@ function getFullPath(partialPath) {
 
 function getRequestParameters(header, body) {
     var modHeader;
-    if(!header) {
+    if (!header) {
         modHeader = {};
     } else {
         modHeader = header;
     }
 
-    if(!modHeader["Content-Type"]) {
+    if (!modHeader["Content-Type"]) {
         modHeader["Content-Type"] = "application/json";
     }
 
     var modBody;
-    switch(modHeader["Content-Type"]) {
+    switch (modHeader["Content-Type"]) {
         case "application/json":
             modBody = JSON.stringify(body);
             break;
@@ -92,14 +98,14 @@ async function getResponseData(response) {
 
     // Build a header map
     var headersMap = {};
-    for(var headerTuple of response.headers) {
+    for (var headerTuple of response.headers) {
         headersMap[headerTuple[0].toLowerCase()] = headerTuple[1];
     }
     responseData["headers"] = headersMap;
 
     // Body processing
     var body;
-    switch(responseData["headers"]["content-type"]) {
+    switch (responseData["headers"]["content-type"]) {
         case "application/json":
             body = await response.json();
             break;

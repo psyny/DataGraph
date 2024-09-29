@@ -164,14 +164,15 @@ class ServerController(SimpleHTTPRequestHandler):
 
     
 
-# Saves Json with basic backend definifions
+
+# Saves a JS with basic backend definifions
 # These definitions may serve as a starting point to simplify frontend configuration
-backendDefinitions = {
+backendDefinitionsObj = {
     "host": HostName,
     "port": HostPort
 }
-FileManager.saveJsonFile(backendDefinitions, "backenddefinitions.json", ["web","modules","network"])
-
+backendDefinitions = "export const definitions = " + json.dumps(backendDefinitionsObj) + ";"
+FileManager.saveTextFile(backendDefinitions, "backend.js", ["web","modules","definitions"])
 
 
 # Start APP
